@@ -10,6 +10,7 @@ func main() {
 	charInterests["bond_james"] = []string{"shaken, not stirred"}
 	charInterests["moneypenny_jenny"] = []string{"intelligence", "literature", "computer science"}
 	charInterests["no_dr"] = []string{"cats", "ice cream", "sunsets"}
+	charInterests["fleming_ian"] = []string{"steaks", "cigars", "espionage"}
 
 	/*
 		charInterests := map[string][]string{
