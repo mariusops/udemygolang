@@ -12,6 +12,7 @@ func main() {
 	charInterests["no_dr"] = []string{"cats", "ice cream", "sunsets"}
 	charInterests["fleming_ian"] = []string{"steaks", "cigars", "espionage"}
 
+	delete(charInterests, "no_dr")
 	/*
 		charInterests := map[string][]string{
 			"bond_james":       {"shaken, not stirred"},
