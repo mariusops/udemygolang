@@ -1,3 +1,4 @@
+// Writer interface & writing to a byte buffer
 package main
 
 import (
