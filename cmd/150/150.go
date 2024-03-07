@@ -1,33 +1,28 @@
-// recursion
-// A function that calls itself
+// wrapper function to read file
+
+// what is a wrapper function?
+// a function that calls another function and returns its result
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"os"
+)
 
 func main() {
-	// 4!
-	fmt.Println(4 * 3 * 2 * 1)
-	x := factorial(4)
-	fmt.Println(x)
-
-	y := factLoop(4)
-	fmt.Println(y)
+	xb, err := readFile("poem.txt")
+	if err != nil {
+		log.Fatalf("Error reading file in main: %s", err)
+	}
+	fmt.Println(string(xb))
 }
 
-func factorial(n int) int {
-	fmt.Println("n is", n)
-	if n == 0 {
-		return 1
+func readFile(fileName string) ([]byte, error) {
+	xb, err := os.ReadFile(fileName)
+	if err != nil {
+		return nil, fmt.Errorf("error reading file: %s", err)
 	}
-	return n * factorial(n-1)
-}
-
-// whatever you can do with recursion you can do with a loop
-func factLoop(n int) int {
-	total := 1
-	for ; n > 0; n-- {
-		total *= n
-	}
-	return total
+	return xb, nil
 }
