@@ -59,11 +59,11 @@ func main() {
 
 	fmt.Println(string(marsUsers))
 
+	// Takes an array of users and encodes it to JSON using Encode method from json package.
+	// json.NewEncoder(os.Stdout) gives a pointer to *Encoder.
+	// *Encoder got SetIndent and Encode methods.
 	encoder := json.NewEncoder(os.Stdout)
 	encoder.SetIndent("", "  ")
 	encoder.Encode(users)
-
-	// not done yet
-	// need writer
 
 }
