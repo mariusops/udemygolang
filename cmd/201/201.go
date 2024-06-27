@@ -9,7 +9,7 @@ https://pkg.go.dev/runtime
 
 We used sync package to create a WaitGroup.
 https://pkg.go.dev/sync
-Variable wg is a WaitGroup pointer. Add method is used to increment the WaitGroup counter by 1.
+Variable wg is a WaitGroup. Add method is used to increment the WaitGroup counter by 1.
 Wait method is used to block the Goroutine until the counter becomes zero.
 Done method is used to decrement the WaitGroup counter by 1.
 
