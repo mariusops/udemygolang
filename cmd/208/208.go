@@ -25,6 +25,9 @@ Why can't we pass a value of type person into saySomething?
 
 Cannot use p1 (variable of type person) as human value in argument to saySomething:
 person does not implement human (method speak has pointer receiver)
+
+First saySomething() is called, which calls speak() method.
+speak() method has a pointer receiver, so it can only be called with a pointer to a person.
 */
 
 package main
