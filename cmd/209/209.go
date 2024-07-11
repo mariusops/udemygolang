@@ -36,7 +36,6 @@ func main() {
 			runtime.Gosched()
 			wg.Done()
 		}()
-
 	}
 
 	wg.Wait()
