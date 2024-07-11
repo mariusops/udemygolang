@@ -37,9 +37,10 @@ func main() {
 			v := incrementer
 			v++
 			incrementer = v
+			mu.Unlock()
 			runtime.Gosched()
 			wg.Done()
-			mu.Unlock()
+
 		}()
 	}
 
