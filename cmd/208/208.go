@@ -53,12 +53,17 @@ func saySomething(h human) {
 }
 
 func main() {
-	p1 := person{
-		name: "John",
-	}
 
-	// saySomething(p)
-	saySomething(p1)
+	/*
+		This will not work because the speak method has a pointer receiver.
+		p1 := person{
+			name: "John",
+		}
+
+		// saySomething(p)
+		saySomething(p1) // cannot use p1 (variable of type person) as human value in argument to saySomething
+
+	*/
 
 	// create a pointer to a person
 	p2 := &person{

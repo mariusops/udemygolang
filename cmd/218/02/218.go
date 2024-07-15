@@ -1,27 +1,23 @@
 /*
-Hands on exercise #5
+Just comma ok idiom
 */
-
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
+
 	c := make(chan int)
 
 	go func() {
 		c <- 42
+
 	}()
 
 	v, ok := <-c
 
 	fmt.Println(v, ok)
 
-	close(c)
+	fmt.Println("about to exit")
 
-	v, ok = <-c
-
-	fmt.Println(v, ok)
 }
